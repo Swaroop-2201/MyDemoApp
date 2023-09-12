@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyDemoApp</string>
+    <string name="enter_passowrd">Enter Passowrd</string>
+    <string name="enter_user_name">Enter User Name</string>
+</resources>

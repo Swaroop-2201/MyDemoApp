@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">S3Project</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">LOGIN</string>
+    <string name="signup">SIGNUP</string>
+    <string name="or_join_us">OR JOIN US!</string>
+</resources>

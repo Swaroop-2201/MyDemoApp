@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ice_blue">#88FFFF</color> ///primary color
+    <color name="light_green">#7BF1A8</color>  ///secondary color
+    <color name="celeste">#C6FFFF</color>
+    <color name="spring_green">#24EB94</color>
+    <color name="iceblue">#88FFFF</color>
+    <color name="schoolbusyellow">#FFDD36</color>
+
+
+</resources>
