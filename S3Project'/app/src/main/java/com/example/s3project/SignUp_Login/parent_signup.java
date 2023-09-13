@@ -29,7 +29,7 @@ public class parent_signup extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(context, login.class);
                 Toast.makeText(context,"Registration Successful!",Toast.LENGTH_SHORT).show();
-                finish();
+                //finish();
             }
         });
     }

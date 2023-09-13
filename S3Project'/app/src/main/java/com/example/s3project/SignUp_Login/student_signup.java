@@ -34,16 +34,20 @@ public class student_signup extends AppCompatActivity {
     public class MyDatePicker extends AppCompatActivity {
         CalendarView calendarView;
         Button btn_date;
-        TextView et_date;
+        TextView tv_dob;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
 
             btn_register = findViewById(R.id.btn_register);
+            btn_date = findViewById(R.id.btn_date);
+            tv_dob = findViewById(R.id.tv_dob);
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_student_signup);
-            et_date.setOnClickListener(new View.OnClickListener() {
+
+
+            btn_date.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showDatePickerDialog();
@@ -75,7 +79,7 @@ public class student_signup extends AppCompatActivity {
                         @Override
                         public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDayOfMonth) {
                             // Handle the selected date (e.g., update the EditText with the selected date)
-                            et_date.setText(selectedDayOfMonth + "/" + (selectedMonth + 1) + "/" + selectedYear);
+                            tv_dob.setText(selectedDayOfMonth + "/" + (selectedMonth + 1) + "/" + selectedYear);
                         }
                     },
                     year, month, day);

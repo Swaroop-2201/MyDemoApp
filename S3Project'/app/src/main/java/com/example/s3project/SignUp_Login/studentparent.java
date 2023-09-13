@@ -33,6 +33,7 @@ public class studentparent extends AppCompatActivity {
                 Intent intent = new Intent(context, parent_signup.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

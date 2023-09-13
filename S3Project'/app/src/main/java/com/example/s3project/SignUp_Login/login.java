@@ -31,19 +31,20 @@ public class login extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Login Successful!",Toast.LENGTH_SHORT).show();
-
+                if(validation()) {
+                    Toast.makeText(context, "Login Successful!", Toast.LENGTH_SHORT).show();
+                }
+                finish();
             }
         });
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, studentparent.class);
-                startActivity(intent);
-                finish();
-
-            }
+                    Intent intent = new Intent(context, studentparent.class);
+                    startActivity(intent);
+                    //finish();
+                }
         });
     }
 
