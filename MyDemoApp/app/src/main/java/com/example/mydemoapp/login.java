@@ -13,11 +13,10 @@ import android.widget.Toast;
 public class login extends AppCompatActivity {
 
 
-    Button btn_signin,btn_signup;
-    String username,password;
+    Button btn_signin, btn_signup;
+    String username, password;
     Context context;
-    EditText et_name,et_password;
-
+    EditText et_name, et_password;
 
 
     @Override
@@ -37,14 +36,14 @@ public class login extends AppCompatActivity {
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               login();
+                login();
             }
         });
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,signup.class);
+                Intent intent = new Intent(context, signup.class);
                 startActivity(intent);
                 finish();
             }

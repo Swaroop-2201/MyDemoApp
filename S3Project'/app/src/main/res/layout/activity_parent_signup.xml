@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/et_password"
         android:layout_width="266dp"
         android:layout_height="48dp"
         android:layout_marginTop="88dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <EditText
-        android:id="@+id/confirmPassword"
+        android:id="@+id/et_confirmPassword"
         android:layout_width="266dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <EditText
         android:id="@+id/et_Phone"
@@ -104,6 +104,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

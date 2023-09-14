@@ -24,41 +24,28 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-                <EditText
-                    android:id="@+id/et_name"
-                    android:layout_width="271dp"
-                    android:layout_height="54dp"
-                    android:layout_marginTop="4dp"
-                    android:ems="10"
-                    android:hint="Name"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.514"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/logosignup" />
-
-                <TextView
-                android:id="@+id/tv_click"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="84dp"
-                android:layout_marginTop="24dp"
-                android:text="Click Picture:"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_click"
-                app:layout_constraintHorizontal_bias="0.805"
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="267dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.548"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+                app:layout_constraintTop_toBottomOf="@+id/logosignup" />
 
             <Button
                 android:id="@+id/btn_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="28dp"
                 android:backgroundTint="@color/spring_green"
                 android:text="Pick Date"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.817"
+                app:layout_constraintHorizontal_bias="0.735"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_Phone" />
 
@@ -76,8 +63,8 @@
 
             <EditText
                 android:id="@+id/tv_address"
-                android:layout_width="272dp"
-                android:layout_height="49dp"
+                android:layout_width="267dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:ems="10"
                 android:hint="Address"
@@ -112,21 +99,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_address" />
 
             <EditText
-                    android:id="@+id/et_password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="144dp"
-                    android:ems="10"
-                    android:hint="Set Password"
-                    android:inputType="textPassword"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.502"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+                android:id="@+id/et_password"
+                android:layout_width="267dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="144dp"
+                android:ems="10"
+                android:hint="Set Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
 
             <EditText
                 android:id="@+id/et_confirmpassword"
-                android:layout_width="wrap_content"
+                android:layout_width="267dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
                 android:ems="10"
@@ -146,30 +133,41 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_confirmpassword" />
 
-                <EditText
-                    android:id="@+id/et_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="40dp"
-                    android:ems="10"
-                    android:hint="Set Username"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_click" />
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="267dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="80dp"
+                android:ems="10"
+                android:hint="Set Username"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
 
             <TextView
                 android:id="@+id/tv_dob"
                 android:layout_width="163dp"
                 android:layout_height="44dp"
                 android:layout_marginTop="28dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
                 android:hint="Select Birth Date"
                 android:textSize="19dp"
-                android:gravity="center"
                 app:layout_constraintEnd_toStartOf="@+id/btn_date"
                 app:layout_constraintTop_toBottomOf="@+id/et_Phone" />
+
+            <TextView
+                android:id="@+id/tv_clickpicture"
+                android:layout_width="140dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:hint="Click Picture:"
+                android:textSize="19dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_click"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

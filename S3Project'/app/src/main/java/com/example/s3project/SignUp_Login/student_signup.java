@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.example.s3project.R;
 
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
+
 
 public class student_signup extends AppCompatActivity {
     Context context;
@@ -50,7 +52,7 @@ public class student_signup extends AppCompatActivity {
             btn_date.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showDatePickerDialog();
+                    showDatePicker();
                 }
             });
 
@@ -58,34 +60,39 @@ public class student_signup extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, login.class);
-                    Toast.makeText(context,"Registration Successful!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Registration Successful!", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             });
         }
 
 
-        private void showDatePickerDialog() {
-            // Get the current date as the default date in the date picker dialog
+        private void showDatePicker() {
             Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
             int month = calendar.get(Calendar.MONTH);
-            int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-            // Create a date picker dialog
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    this,
+            int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(MyDatePicker.this,
                     new DatePickerDialog.OnDateSetListener() {
                         @Override
-                        public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDayOfMonth) {
-                            // Handle the selected date (e.g., update the EditText with the selected date)
-                            tv_dob.setText(selectedDayOfMonth + "/" + (selectedMonth + 1) + "/" + selectedYear);
+                        public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                            String formattedDate = getFormattedDate(day, month, year);
+                            tv_dob.setText(formattedDate);
                         }
-                    },
-                    year, month, day);
-
-            // Show the date picker dialog
+                    }, year, month, dayOfMonth);
             datePickerDialog.show();
+        }
+
+        private String getFormattedDate(int dayOfMonth, int month, int year) {
+            Calendar cal = Calendar.getInstance();
+            cal.set(Calendar.YEAR, year);
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            cal.set(Calendar.MONTH, month);
+            String DATE_FORMAT = "EE, MMM dd, yyyy";
+//        String DATE_FORMAT = "EEE-dd-MM-yyyy";
+//        String DATE_FORMAT = "E, MMM d, yyyy";
+            SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
+            return sdf.format(cal.getTime());
         }
     }
 }
