@@ -14,7 +14,7 @@ import com.example.s3project.R;
 
 
 
-public class parent_signup extends AppCompatActivity {
+public class parent_signup<StudentDataModel> extends AppCompatActivity {
     Context context;
     Button btn_register;
     EditText et_name,et_Phone, et_email, et_username, et_password, et_confirmPassword;
@@ -33,6 +33,8 @@ public class parent_signup extends AppCompatActivity {
                 //finish();
             }
         });
+
+
     }
 
     private void initViews() {
@@ -44,5 +46,20 @@ public class parent_signup extends AppCompatActivity {
         et_confirmPassword = findViewById(R.id.et_confirmPassword);
 
         btn_register = findViewById(R.id.btn_register);
+    }
+
+    private void registration() {
+        if (validate()) {
+            //StudentDataModel studentDataModel = new StudentDataModel();
+
+            studentDataModel.setFirstName(et_first_name.getText().toString());
+            studentDataModel.setLastName(et_last_name.getText().toString());
+            studentDataModel.setEmail(et_email.getText().toString());
+            studentDataModel.setMobile(et_mobile.getText().toString());
+            studentDataModel.setUsername(et_usename.getText().toString());
+            studentDataModel.setPassword(et_password.getText().toString());
+
+            //MyDbHelper myDbHelper = new MyDbHelper(context);
+        }
     }
 }

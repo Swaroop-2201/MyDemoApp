@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUp_Login.login"
-    android:background="@color/iceblue"
+    android:background="@color/primary"
     >
 
     <ImageView
@@ -25,6 +25,8 @@
         android:layout_height="53dp"
         android:layout_marginTop="56dp"
         android:ems="10"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:hint="@string/enter_username"
         android:inputType="text"
         android:textSize="30dp"
@@ -39,6 +41,8 @@
         android:layout_height="53dp"
         android:layout_marginTop="44dp"
         android:ems="10"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
         android:textSize="30dp"
@@ -81,6 +85,7 @@
         android:layout_height="wrap_content"
         android:text="@string/or_join_us"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_signup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

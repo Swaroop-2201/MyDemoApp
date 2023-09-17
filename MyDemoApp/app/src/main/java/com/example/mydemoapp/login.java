@@ -1,82 +1,62 @@
 package com.example.mydemoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 
-    Button btn_signin, btn_signup;
-    String username, password;
-    Context context;
-    EditText et_name, et_password;
+class loginActivity extends AppCompatActivity {
 
+    private TextInputLayout usernameLayout, passwordLayout;
+    private EditText usernameEditText, passwordEditText;
+    private Button loginButton, signupButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        usernameLayout = findViewById(R.id.usernameLayout);
+        passwordLayout = findViewById(R.id.passwordLayout);
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginButton);
+        signupButton = findViewById(R.id.signupButton);
 
-        context = login.this;
-
-        btn_signup = findViewById(R.id.btn_signup);
-        btn_signin = findViewById(R.id.btn_signin);
-        et_name = findViewById(R.id.et_name);
-        et_password = findViewById(R.id.et_password);
-
-
-        btn_signin.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+                // Perform login validation and authentication here
+                String username = usernameEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
+
+                if (isValidCredentials(username, password)) {
+                    // Successful login, navigate to the main activity or perform other actions
+                    Toast.makeText(loginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Invalid credentials, show an error message
+                    usernameLayout.setError("Invalid username or password");
+                    passwordLayout.setError("Invalid username or password");
+                }
             }
         });
 
-        btn_signup.setOnClickListener(new View.OnClickListener() {
+        signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, signup.class);
-                startActivity(intent);
-                finish();
+            public void onClick(View v) {
+                // Handle signup button click, navigate to the signup activity, etc.
             }
         });
     }
 
-    private void login() {
-        if (validation()) {
-            if (username.equals("abc") && password.equals("123")) {
-                Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(context, MainActivity.class);
-                startActivity(intent);
-                finish();
-            } else {
-                Toast.makeText(context, "Failed, User not found", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    private boolean validation() {
-        username = et_name.getText().toString();
-        password = et_password.getText().toString();
-
-        if (username.isEmpty()) {
-            Toast.makeText(context, "Please enter username", Toast.LENGTH_SHORT).show();
-//            et_username.setError("Please enter username");
-            et_name.requestFocus();
-            return false;
-        } else if (password.isEmpty()) {
-            Toast.makeText(context, "Please enter password", Toast.LENGTH_SHORT).show();
-            et_password.requestFocus();
-            return false;
-        }
-        return true;
+    private boolean isValidCredentials(@NonNull String username, @NonNull String password) {
+        // Implement your validation logic here (e.g., check against a database)
+        return username.equals("example") && password.equals("password");
     }
 }
