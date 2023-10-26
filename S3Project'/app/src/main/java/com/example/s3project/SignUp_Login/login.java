@@ -31,10 +31,10 @@ public class login extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(validation()) {
-                    Toast.makeText(context, "Login Successful!", Toast.LENGTH_SHORT).show();
-                }
-                finish();
+//                if(validation()) {
+//                    Toast.makeText(context, "Login Successful!", Toast.LENGTH_SHORT).show();
+//                }
+//                finish();
             }
         });
 
@@ -72,6 +72,4 @@ public class login extends AppCompatActivity {
         }
         return true;
     }
-
-
 }

@@ -7,14 +7,183 @@
     tools:context=".Dashboard.owner_dashboard"
     android:background="@color/primary">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="411dp"
-        android:layout_height="502dp"
-        android:layout_marginBottom="4dp"
+    <TextView
+        android:id="@+id/tv_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/owner"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="415dp"
+        android:layout_height="588dp"
+        android:background="@drawable/dashboard_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent">
 
-    </androidx.gridlayout.widget.GridLayout>
+
+        <ImageButton
+            android:id="@+id/btn_teacher"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="44dp"
+            android:background="00000000"
+            android:scaleType="fitStart"
+            android:contentDescription="@string/teacher"
+            android:src="@drawable/teacher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_fees"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:contentDescription="@string/fees"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="48dp"
+            android:background="00000000"
+            android:src="@drawable/img"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_finances"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="48dp"
+            android:background="00000000"
+            android:contentDescription="@string/finances"
+            android:scaleType="fitCenter"
+            android:src="@drawable/finances"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageButton
+            android:id="@+id/btn_salary"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:background="00000000"
+            android:contentDescription="@string/salary"
+            android:scaleType="fitCenter"
+            android:src="@drawable/salary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageButton
+            android:id="@+id/btn_review"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="56dp"
+            android:background="00000000"
+            android:contentDescription="@string/review"
+            android:scaleType="fitEnd"
+            android:src="@drawable/review"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_salary" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/salary_caps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_salary" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:text="@string/add_instructor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_teacher" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="96dp"
+            android:text="@string/fees_caps"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fees" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="76dp"
+            android:textColor="@color/black"
+            android:text="FINANCES"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_finances" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:text="@string/reviews"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_review" />
+
+        <ImageButton
+            android:id="@+id/btn_view_attendance"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="48dp"
+            android:background="00000000"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/view_attendance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/attendance" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:text="@string/view_attendance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_attendance" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_owner" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

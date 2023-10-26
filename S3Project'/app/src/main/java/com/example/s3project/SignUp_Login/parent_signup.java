@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.s3project.Dashboard.parent_dashboard;
 import com.example.s3project.R;
+import com.example.s3project.Data_Model.ParentDataModel;
 
 
 
@@ -26,10 +28,18 @@ public class parent_signup<StudentDataModel> extends AppCompatActivity {
         initViews();
 
         btn_register.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, login.class);
-                Toast.makeText(context,"Registration Successful!",Toast.LENGTH_SHORT).show();
+                registration();
+                if(validate()){
+                    Intent intent = new Intent(context, parent_dashboard.class);
+                    startActivity(intent);
+                    //Toast.makeText(context,"Registration Successful!",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(context,"Registration Failed, try again!",Toast.LENGTH_SHORT).show();
+                }
                 //finish();
             }
         });
@@ -50,16 +60,45 @@ public class parent_signup<StudentDataModel> extends AppCompatActivity {
 
     private void registration() {
         if (validate()) {
-            //StudentDataModel studentDataModel = new StudentDataModel();
+            ParentDataModel parentDataModel = new ParentDataModel();
 
-            studentDataModel.setFirstName(et_first_name.getText().toString());
-            studentDataModel.setLastName(et_last_name.getText().toString());
-            studentDataModel.setEmail(et_email.getText().toString());
-            studentDataModel.setMobile(et_mobile.getText().toString());
-            studentDataModel.setUsername(et_usename.getText().toString());
-            studentDataModel.setPassword(et_password.getText().toString());
+            parentDataModel.setName(et_name.getText().toString());
+            parentDataModel.setPhone(et_Phone.getText().toString());
+            parentDataModel.setEmail(et_email.getText().toString());
+            parentDataModel.setUsername(et_username.getText().toString());
+            parentDataModel.setPassword(et_password.getText().toString());
+            parentDataModel.setConfirmPassword(et_confirmPassword.getText().toString());
 
             //MyDbHelper myDbHelper = new MyDbHelper(context);
         }
+    }
+    private boolean validate() {
+        if (et_name.getText().toString().isEmpty()) {
+            et_name.setError(getResources().getString(R.string.name));
+            et_name.requestFocus();
+            return false;
+        } else if (et_Phone.getText().toString().isEmpty()) {
+            et_Phone.setError(getResources().getString(R.string.contact_number));
+            et_Phone.requestFocus();
+            return false;
+        } else if (et_email.getText().toString().isEmpty()){
+            et_email.setError(getResources().getString(R.string.e_mail_address));
+            et_email.requestFocus();
+            return false;
+        } else if (et_username.getText().toString().isEmpty()) {
+            et_username.setError(getResources().getString(R.string.enter_username));
+            et_username.requestFocus();
+            return false;
+        } else if (et_password.getText().toString().isEmpty()) {
+            et_password.setError(getResources().getString(R.string.set_password));
+            et_password.requestFocus();
+            return false;
+        } else if (et_confirmPassword.getText().toString().isEmpty()) {
+            et_confirmPassword.setError(getResources().getString(R.string.confirm_password));
+            et_confirmPassword.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 }

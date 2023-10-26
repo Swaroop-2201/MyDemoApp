@@ -15,6 +15,7 @@ import android.widget.Toast;
 //import androidx.camera.core.ImageCapture;
 
 
+import com.example.s3project.Dashboard.student_dashboard;
 import com.example.s3project.R;
 
 import java.util.Calendar;
@@ -59,7 +60,7 @@ public class student_signup extends AppCompatActivity {
             btn_register.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(context, login.class);
+                    Intent intent = new Intent(context, student_dashboard.class);
                     Toast.makeText(context, "Registration Successful!", Toast.LENGTH_SHORT).show();
                     finish();
                 }

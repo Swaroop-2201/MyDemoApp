@@ -19,6 +19,21 @@
         android:theme="@style/Theme.S3Project"
         tools:targetApi="31">
         <activity
+            android:name=".Owner_Dashboard.owner_fees"
+            android:exported="false" />
+        <activity
+            android:name=".Owner_Dashboard.owner_view_attendance"
+            android:exported="false" />
+        <activity
+            android:name=".Owner_Dashboard.owner_reviews"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_dashboard.add_batch"
+            android:exported="false" />
+        <activity
+            android:name=".Owner_Dashboard.owner_add_instructor"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard.teacher_dashboard"
             android:exported="false" />
         <activity
