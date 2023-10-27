@@ -37,4 +37,7 @@
     <string name="fees_caps">FEES</string>
     <string name="add_instructor">ADD INSTRUCTOR</string>
     <string name="salary_caps">SALARY</string>
+    <string name="view_reviews">View Reviews</string>
+    <string name="signin_with_google">SignIn with Google</string>
+    <string name="attendance1">ATTENDANCE</string>
 </resources>

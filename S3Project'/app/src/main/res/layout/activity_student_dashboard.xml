@@ -35,24 +35,10 @@
             android:layout_height="125dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="44dp"
-            android:background="00000000"
             android:scaleType="fitStart"
             android:contentDescription="@string/mark_attendance"
             android:src="@drawable/attendance"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/btn_view_attendance"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:contentDescription="@string/view_attendance"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="48dp"
-            android:scaleType="fitCenter"
-            android:background="00000000"
-            android:src="@drawable/markattendance"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
@@ -61,12 +47,11 @@
             android:layout_height="125dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="48dp"
-            android:background="00000000"
             android:contentDescription="@string/review"
             android:scaleType="fitCenter"
             android:src="@drawable/review"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <ImageButton
             android:id="@+id/btn_fees"
@@ -74,7 +59,6 @@
             android:layout_height="125dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="20dp"
-            android:background="00000000"
             android:contentDescription="@string/fees"
             android:src="@drawable/img"
             android:scaleType="fitCenter"
@@ -82,18 +66,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
-        <ImageButton
+            <ImageButton
             android:id="@+id/btn_reports"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="24dp"
-            android:background="00000000"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="48dp"
             android:contentDescription="@string/view_reports"
             android:scaleType="fitCenter"
             android:src="@drawable/progressreport"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
@@ -110,32 +93,21 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
+            android:layout_marginStart="64dp"
             android:layout_marginTop="12dp"
+            android:text="@string/attendance1"
             android:textColor="@color/black"
-            android:text="@string/mark_attendance"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_attendance" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="48dp"
-            android:text="@string/view_attendance"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_view_attendance" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="76dp"
-            android:textColor="@color/black"
+            android:layout_marginEnd="84dp"
             android:text="@string/reviewCaps"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_review" />
 
@@ -143,11 +115,11 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="60dp"
             android:text="@string/view_reports"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_reports" />
 
 

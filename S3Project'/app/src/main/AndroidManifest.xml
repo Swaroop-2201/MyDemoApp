@@ -19,6 +19,33 @@
         android:theme="@style/Theme.S3Project"
         tools:targetApi="31">
         <activity
+            android:name=".Teacher_dashboard.teacher_attendance"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_dashboard.teacher_receive_fees"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_dashboard.teacher_add_report"
+            android:exported="false" />
+        <activity
+            android:name=".Parent_Dashboard.parent_view_report"
+            android:exported="false" />
+        <activity
+            android:name=".Parent_Dashboard.parent_view_attendance"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Dashboard.student_reports"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Dashboard.student_attendance"
+            android:exported="false" />
+        <activity
+            android:name=".Parent_Dashboard.review"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Dashboard.student_review"
+            android:exported="false" />
+        <activity
             android:name=".Owner_Dashboard.owner_fees"
             android:exported="false" />
         <activity

@@ -17,7 +17,7 @@ public class studentparent extends AppCompatActivity {
     ImageButton imageButton_student,imageButton_parent;
     Context context;
 
-    //@SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

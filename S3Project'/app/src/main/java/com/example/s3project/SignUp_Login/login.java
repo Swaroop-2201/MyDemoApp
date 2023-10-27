@@ -8,13 +8,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
+
 
 import com.example.s3project.R;
 
 public class login extends AppCompatActivity {
 
     Button btn_signup, btn_login;
+    ImageButton imgbtn_google;
     EditText et_username, et_password;
     String username, password;
     Context context;
@@ -72,4 +84,7 @@ public class login extends AppCompatActivity {
         }
         return true;
     }
+
+
+
 }
